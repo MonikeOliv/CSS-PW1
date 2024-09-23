@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: gray;
+    }
+    h1 {
+        color: blue;
+        text-decoration: underline;
+        margin: 20px;
+        padding: 20px;
+    }
+    .container {
+        border: 2px solid red; 
+        background-color: beige;
+        padding: 20px; 
+        width: fit-content; 
+        margin: 20px 0 20px 20px; 
+    }
+    ul {
+        list-style-type: none;
+        padding: 0; 
+        position: relative; 
+        padding-left: 20px; 
+        margin: 10px 0; 
+    }
+    li.star {
+        position: relative; 
+        padding-left: 30px; 
+    }
+    li.star::before {
+        content: '';
+        background-image: url('Star.png'); 
+        background-size: contain; 
+        background-repeat: no-repeat; 
+        position: absolute; 
+        left: 0; 
+        top: 50%; 
+        transform: translateY(-50%); 
+        width: 30px; 
+        height: 30px; 
+    }
+    li.check {
+        position: relative; 
+        padding-left: 30px; 
+    }
+    li.check::before {
+        content: '';
+        background-image: url('Check.png'); 
+        background-size: contain; 
+        background-repeat: no-repeat; 
+        position: absolute; 
+        left: 0; 
+        top: 50%;
+        transform: translateY(-50%); 
+        width: 20px; 
+        height: 20px;
+    }
+</style>
+</head>
+<body>
+<h1>Lista de compras</h1>
+<div class="container">
+    <ul>
+        <li class="star">Café</li>
+        <ul>
+            <li class="check">Em pó</li>
+            <li class="check">Solúvel</li>
+        </ul>
+    </ul>
+    <ul>
+        <li class="star">Açúcar</li>
+    </ul>
+    <ul>
+        <li class="star">Arroz</li>
+    </ul>
+    <ul>
+        <li class="star">Leite</li>
+    </ul>
+    <ul>
+        <li class="star">Massa</li>
+        <ul>
+            <li class="check">Spaguetti</li>
+            <li class="check">Tagliatelle</li>
+            <li class="check">Vermicelli</li>
+            <li class="check">Maccheron</li>
+        </ul>
+    </ul>
+</div>
+</body>
+</html>
